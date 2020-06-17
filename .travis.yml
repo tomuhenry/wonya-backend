@@ -1,0 +1,22 @@
+language: python
+
+python:
+  - "3.8"
+
+services:
+  - postgresql
+
+install:
+  - pip install -r requirements.txt
+  - pip install codecov
+
+before-script:
+  - python manage.py makemigrations
+  - python manage.py migrate
+
+script:
+  - coverage run --source='.' manage.py test
+  - bash <(curl -s https://codecov.io/bash)
+
+after_success:
+  - codecov

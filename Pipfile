@@ -9,6 +9,12 @@ verify_ssl = true
 python-decouple = "*"
 django = "*"
 psycopg2 = "*"
+codecov = "*"
+gunicorn = "*"
+django-heroku = "*"
+whitenoise = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.8"

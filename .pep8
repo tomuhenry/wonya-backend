@@ -1,0 +1,1 @@
+autopep8 --diff --recursive --exclude="*/migrations/*.py"
